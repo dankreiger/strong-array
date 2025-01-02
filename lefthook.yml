@@ -1,17 +1,9 @@
-# Build commit messages
-prepare-commit-msg:
-  commands:
-    commitzen:
-      interactive: true
-      run: bunx cz --hook
-      env:
-        LEFTHOOK: '0'
-
 # Validate commit messages
 commit-msg:
   commands:
     test:
       run: bun test
+
     'format and lint':
       glob: '*.{js,ts,jsx,tsx}'
       run: bunx biome check --write {staged_files}

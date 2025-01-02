@@ -43,7 +43,6 @@
   ],
   "scripts": {
     "build": "bun run build.config.ts",
-    "commit": "git-cz",
     "fix": "bunx biome check --write .",
     "lint": "eslint src",
     "refresh": "bunx rimraf bun.lockb node_modules && bun install",
