@@ -1,0 +1,72 @@
+{
+  "name": "strong-array",
+  "version": "0.0.0",
+  "description": "Strongly typed read-only object methods",
+  "keywords": [
+    "array",
+    "typescript"
+  ],
+  "homepage": "https://github.com/dankreiger/strong-array",
+  "bugs": {
+    "url": "https://github.com/dankreiger/strong-array/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dankreiger/strong-array.git"
+  },
+  "license": "ISC",
+  "author": "Dan Kreiger <dankreiger@gmail.com>",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/types/index.d.ts",
+        "default": "./dist/esm/index.js"
+      },
+      "require": {
+        "types": "./dist/types/index.d.ts",
+        "default": "./dist/cjs/index.js"
+      }
+    },
+    "./package.json": "./package.json",
+    "./*": "./*"
+  },
+  "main": "dist/cjs/index.js",
+  "unpkg": "dist/iife/index.js",
+  "module": "dist/esm/index.js",
+  "browser": "dist/iife/index.js",
+  "types": "./dist/types/index.d.ts",
+  "files": [
+    "dist/**",
+    "!**/*.tsbuildinfo"
+  ],
+  "scripts": {
+    "build": "bun run build.config.ts",
+    "commit": "git-cz",
+    "fix": "bunx biome check --write .",
+    "lint": "eslint src",
+    "refresh": "bunx rimraf bun.lockb node_modules && bun install",
+    "release": "dotenv release-it --",
+    "test": "bun test --watch",
+    "typecheck": "bunx tsc --noEmit"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "@commitlint/cli": "19.6.1",
+    "@commitlint/config-conventional": "19.6.0",
+    "@types/bun": "1.1.14",
+    "commitizen": "4.3.1",
+    "cz-conventional-changelog": "3.3.0",
+    "globals": "15.14.0",
+    "lefthook": "1.10.1",
+    "rimraf": "6.0.1",
+    "typescript": "5.7.2"
+  },
+  "umd": "dist/index.global.js"
+}
