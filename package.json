@@ -40,7 +40,7 @@
     "fix": "bunx biome check --write .",
     "lint": "eslint src",
     "refresh": "bunx rimraf bun.lockb node_modules && bun install",
-    "release": "LEFTHOOK=0 dotenv release-it --",
+    "release": "dotenv release-it --",
     "test": "bun test --watch",
     "typecheck": "bunx tsc --noEmit"
   },
