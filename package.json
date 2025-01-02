@@ -1,6 +1,6 @@
 {
   "name": "strong-array",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Strongly typed read-only object methods",
   "keywords": [
     "array",
