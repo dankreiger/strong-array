@@ -2,10 +2,7 @@
   "name": "strong-array",
   "version": "0.0.3",
   "description": "Strongly typed read-only object methods",
-  "keywords": [
-    "array",
-    "typescript"
-  ],
+  "keywords": ["array", "typescript"],
   "homepage": "https://github.com/dankreiger/strong-array",
   "bugs": {
     "url": "https://github.com/dankreiger/strong-array/issues"
@@ -37,17 +34,15 @@
   "module": "dist/esm/index.js",
   "browser": "dist/iife/index.js",
   "types": "./dist/types/index.d.ts",
-  "files": [
-    "dist/**",
-    "!**/*.tsbuildinfo"
-  ],
+  "files": ["dist/**", "!**/*.tsbuildinfo"],
   "scripts": {
     "build": "bun run build.config.ts",
     "fix": "bunx biome check --write .",
     "lint": "eslint src",
     "refresh": "bunx rimraf bun.lockb node_modules && bun install",
     "release": "dotenv release-it --",
-    "test": "bun test --watch",
+    "test": "bun test",
+    "test:watch": "bun test --watch",
     "typecheck": "bunx tsc --noEmit"
   },
   "config": {
