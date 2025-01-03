@@ -16,28 +16,33 @@ await Promise.allSettled(
       entrypoints: ['./src/index.ts'],
       outdir: `./dist/${format}`,
       format,
+      minify: format === 'iife',
       sourcemap: 'linked',
-      // plugins: [
-      //   {
-      //     name: 'replace-exports',
-      //     setup(build) {
-      //       build.onLoad({ filter: /src\/index\.ts/ }, async () => {
-      //         if (format === 'iife') {
-      //           return {
-      //             contents: /* ts */ `import * as StrongArray from './utils';
-      //             // check if we are in the browser
-      //             if (typeof window !== 'undefined') {
-      //               window.StrongArray = StrongArray;
-      //             }
-      //             export default StrongArray;
+      plugins: [
+        {
+          name: 'replace-exports',
+          setup(build) {
+            build.onLoad({ filter: /src\/index\.ts/ }, async () => {
+              if (format === 'iife') {
+                return {
+                  contents: /* ts */ `import { toEnum } from './utils';
 
-      //             `,
-      //           }
-      //         }
-      //       })
-      //     },
-      //   },
-      // ],
+                  const publicApi = { toEnum };
+                  const isBrowser = typeof window !== 'undefined' && window !== null && typeof window === 'object';
+
+                  // check if we are in the browser
+                  if (isBrowser) {
+                    window.StrongArray = publicApi;
+                  }
+                  export default window.StrongArray = publicApi
+
+                  `,
+                }
+              }
+            })
+          },
+        },
+      ],
     })
       .then((buildOutput) => {
         if (buildOutput.success) return
