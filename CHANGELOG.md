@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.0.4](https://github.com/dankreiger/strong-array/compare/v0.0.3...v0.0.4) (2025-01-03)
+
+
+### Bug Fixes
+
+* add unpkg build ([57989e2](https://github.com/dankreiger/strong-array/commit/57989e2319d6265028fd052e1f555245e8d2a450))
+* make hooks more reasonable ([7098df9](https://github.com/dankreiger/strong-array/commit/7098df95f2048bbe5ad32680cb131817022f3811))
+
 ## 0.0.3 (2025-01-02)
 
 
