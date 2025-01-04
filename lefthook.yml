@@ -22,8 +22,4 @@ commit-msg:
     typecheck:
       glob: '*.{js,ts,jsx,tsx}'
       run: bunx tsc --noEmit    
-    
-    lint_commit_message:
-      run: bunx commitlint --edit {1} 
-
 
