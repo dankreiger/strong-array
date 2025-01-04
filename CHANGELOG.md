@@ -1,5 +1,7 @@
 # Changelog
 
+## [0.0.7](https://github.com/dankreiger/strong-array/compare/v0.0.6...v0.0.7) (2025-01-04)
+
 ## [0.0.6](https://github.com/dankreiger/strong-array/compare/v0.0.4...v0.0.6) (2025-01-04)
 
 
