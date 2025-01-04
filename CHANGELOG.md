@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.0.6](https://github.com/dankreiger/strong-array/compare/v0.0.4...v0.0.6) (2025-01-04)
+
+
+### Bug Fixes
+
+* update build config ([c6a7b83](https://github.com/dankreiger/strong-array/commit/c6a7b832098eb92ab766286cfab686b35202fec7))
+* update build config ([a0df3e6](https://github.com/dankreiger/strong-array/commit/a0df3e6714d151409ef0e77481c7515244e9df06))
+* update build config ([bdf0b32](https://github.com/dankreiger/strong-array/commit/bdf0b3260daf1e87a03e74b83fa5eba646266739))
+
 ## [0.0.4](https://github.com/dankreiger/strong-array/compare/v0.0.3...v0.0.4) (2025-01-03)
 
 
