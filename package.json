@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/dankreiger/strong-array.git"
+    "url": "git+https://github.com/dankreiger/strong-array.git"
   },
   "license": "ISC",
   "author": "Dan Kreiger <dankreiger@gmail.com>",
