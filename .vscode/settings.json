@@ -32,5 +32,8 @@
       "source.fixAll.eslint": "never",
       "source.addMissingImports": "explicit"
     }
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "biomejs.biome"
   }
 }

@@ -6,8 +6,8 @@ const formats = [
   'iife',
 ] as const satisfies readonly BuildConfig['format'][]
 
-// Clean the dist folder
-await Bun.$`rm -rf ./dist`
+
+await Bun.$`find . -type d -name dist -exec rm -rf {} +`
 
 // Build the project in all formats
 await Promise.allSettled(
@@ -35,7 +35,6 @@ await Promise.allSettled(
                     window.StrongArray = publicApi;
                   }
                   export default window.StrongArray = publicApi
-
                   `,
                 }
               }

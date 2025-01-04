@@ -1,9 +1,16 @@
 {
   "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
-  "vcs": { "enabled": false, "clientKind": "git", "useIgnoreFile": false },
+  "vcs": {
+    "enabled": false,
+    "clientKind": "git",
+    "useIgnoreFile": false
+  },
   "files": {
     "ignoreUnknown": false,
-    "ignore": ["dist/**", "node_modules/**", "package-lock.json"]
+    "ignore": ["dist/**", "node_modules/**", "package-lock.json"],
+    "include": [
+      "**/*.{ts,tsx,json,yml,yaml,md,css,scss,html,js,jsx,mjs,cjs,mts,cts}"
+    ]
   },
   "formatter": {
     "enabled": true,
@@ -16,7 +23,9 @@
     "attributePosition": "auto",
     "bracketSpacing": true
   },
-  "organizeImports": { "enabled": true },
+  "organizeImports": {
+    "enabled": true
+  },
   "linter": {
     "enabled": true,
     "rules": {
@@ -58,7 +67,10 @@
         "useValidForDirection": "error",
         "useYield": "error"
       },
-      "style": { "noNamespace": "error", "useAsConstAssertion": "error" },
+      "style": {
+        "noNamespace": "error",
+        "useAsConstAssertion": "error"
+      },
       "suspicious": {
         "noAssignInExpressions": "error",
         "noAsyncPromiseExecutor": "error",
@@ -233,7 +245,9 @@
     ]
   },
   "overrides": [
-    { "include": ["**/*.{js,mjs,cjs,ts}"] },
+    {
+      "include": ["**/*.{js,mjs,cjs,ts}"]
+    },
     {
       "include": ["**/*.ts", "**/*.tsx", "**/*.mts", "**/*.cts"],
       "linter": {

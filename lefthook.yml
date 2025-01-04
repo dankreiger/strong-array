@@ -1,17 +1,29 @@
 # Validate commit messages
+pre-commit:
+  parallel: true
+  commands:
+    test:
+      run: bun test
+
+    typecheck:
+      glob: 'src/**/*.{js,ts,jsx,tsx}'
+      run: bunx tsc --noEmit   
+
+    format_and_lint:
+      glob: 'src/**/*.{js,ts,jsx,tsx}'
+      run:  bunx biome check --write {staged_files}
+      stage_fixed: true       
+
 commit-msg:
   commands:
     test:
       run: bun test
+
     typecheck:
       glob: '*.{js,ts,jsx,tsx}'
       run: bunx tsc --noEmit    
-    'lint commit message':
-      run: bunx commitlint --edit {1}        
-
-    'format and lint':
-      glob: '*.{js,ts,jsx,tsx}'
-      run: bunx sort-package-json && bunx biome check --write {staged_files}
-      stage_fixed: true
+    
+    lint_commit_message:
+      run: bunx commitlint --edit {1} 
 
 
