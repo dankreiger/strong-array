@@ -22,9 +22,8 @@
 ## Features
 
 - **Compile-time type safety** for enum-like mappings derived from read-only arrays.
-- Works seamlessly with `string`, `number`, and `symbol` array elements.
+- Works with all valid object key types (`string`, `number`, and `symbol`).
 - Encourages immutable, predictable structures by requiring `as const` arrays.
-- Minimal footprint, easy to integrate into any TypeScript project.
 
 ## Installation
 
@@ -163,6 +162,7 @@ const mixedEnum = toEnum(mixedArray);
     readonly [A]: A;
   }
 */
+```
 
 ### Why Use `as const`?
 
@@ -185,4 +185,3 @@ This project is licensed under the MIT License.
 ## Contributing
 
 Contributions are always welcome! Feel free to open an issue or submit a pull request on GitHub if you have feature requests or bug fixes.
-```
